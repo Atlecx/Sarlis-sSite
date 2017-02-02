@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>South Forest Center</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="navbar">
+	<a href="#wheelBlock"><div class="barBlock" id="logo">
+		<img src="/../img/logo.png">
+	</div></a>
+	<div class="barBlock">
+		<a href="#services"><div class="blockBlock">Our Services</div></a>
+		<a href="#hours"><div class="blockBlock">Hours and Availabilty</div></a>
+		<a href="#contact"><div class="blockBlock">Contact</div></a>
+	</div>
+</div>
+<div id="wheelBlock" class="block">
+<h1>Hello,<br>Worcester.</h1>
+<h2>The South Forest Center,<br>Now Open.</h2>
+</div>
+<div class="block textBlock" id="services" style="background-color: #6ec8e5;">
+	<h3>Our Services</h3>
+</div>
+<div class="block picBlock">
+	<div class="p p1"><div class="picContent"><div class="title">See a Movie</div><div class="sub">we have a Drive-In!</div></div></div>
+	<div class="p p2"><div class="picContent"><div class="title">Catch some Air</div><div class="sub">Skate Park: fun for all ages</div></div></div>
+	<div class="p p3"><div class="picContent"><div class="title">Experience a New Level of Delicious</div><div class="sub">Try our gourmet Snack Bar</div></div></div>
+</div>
+<div class="block textBlock longer" id="hours">
+	<h3>Our Hours and Availability</h3>
+	<div class="dubBlock">
+		<div class="oneBlock">
+			<h6>Hours:</h6>
+			<div>Saturday: 10:00AM - 10PM</div>
+			<div>Sunday: 10:00AM - 10PM</div>
+			<div>Monday: CLOSED</div>
+			<div>Tuesday: CLOSED</div>
+			<div>Wednesday: 10:00AM - 10PM</div>
+			<div>Thursday: 10:00AM - 10PM</div>
+			<div>Friday: 10:00AM - 10PM</div>
+		</div>
+		<div class="oneBlock">
+			<h6>Schedule a Party:</h6>
+			<br>
+			<br>
+			<div>Sorry, we're all booked up!</div>
+		</div>
+	</div>
+</div>
+<div class="block textBlock" id="contact">
+	<h3>Contact Us</h3>
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > 20){
+            $("#navbar").slideDown();
+        }
+        if ($(window).scrollTop() <= 20){
+            $("#navbar").slideUp();
+        }
+    });
+});
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 100
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</html>
