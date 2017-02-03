@@ -52,6 +52,20 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/favi.ai": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/favi.ai",
+		"oF": 0
+		},
+	"\/img\/favi_favi.png": {
+		"ft": 32768,
+		"iS": 5686,
+		"oA": 0,
+		"oAP": "\/img\/favi_favi.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/food.jpg": {
 		"ft": 16384,
 		"iS": 1124869,
