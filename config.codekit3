@@ -58,6 +58,20 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/close.ai": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/close.ai",
+		"oF": 0
+		},
+	"\/img\/close.png": {
+		"ft": 32768,
+		"iS": 3275,
+		"oA": 0,
+		"oAP": "\/img\/close.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/favi.ai": {
 		"ft": 8192,
 		"oA": 2,

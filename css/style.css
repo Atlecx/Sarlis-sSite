@@ -189,9 +189,23 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-  #mobileNavButton img {
-    height: 50px;
-    margin: 0 auto; }
+  #mobileNavButton .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    #mobileNavButton .row.nav img {
+      height: 45px;
+      margin-bottom: 5px; }
+    #mobileNavButton .row.nav .toggle {
+      height: 35px;
+      position: absolute;
+      right: 20px;
+      width: 35px;
+      background-color: black;
+      background-image: url("https://chris-sarli.github.io/FEC/img/menu.jpg"); }
 
 .showMobileNavButton {
   top: 0px !important; }
