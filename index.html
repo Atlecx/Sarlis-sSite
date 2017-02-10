@@ -18,6 +18,10 @@
 		<a href="#contact"><div class="blockBlock">Contact</div></a>
 	</div>
 </div>
+<div id="mobileNavButton">
+		<img src="https://chris-sarli.github.io/FEC/img/logo.png">
+</div>
+<div class="pageContent">
 <div id="wheelBlock" class="block">
 	<div class="shader">
 		<h1>Hello,<br>Worcester.</h1>
@@ -59,15 +63,18 @@
 	<p>Phone: (555)-555-5555</p>
 	<p>email: coolio@domain.org</p>
 </div>
+</div>
 </body>
 <script type="text/javascript">
 $(document).ready(function(){
     $(window).scroll(function(){
         if ($(window).scrollTop() > 20){
-            $("#navbar").slideDown();
+            $("#navbar").addClass("showNav");
+						$("#mobileNavButton").addClass("showMobileNavButton");
         }
         if ($(window).scrollTop() <= 20){
-            $("#navbar").slideUp();
+            $("#navbar").removeClass("showNav");
+						$("#mobileNavButton").removeClass("showMobileNavButton");
         }
     });
 });

@@ -19,6 +19,8 @@ p {
   height: 90px;
   background-color: rgba(255, 255, 255, 0.97);
   position: fixed;
+  top: -90px;
+  transition: 0.1s ease;
   display: none;
   box-sizing: border-box;
   padding: 10px;
@@ -31,20 +33,23 @@ p {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4); }
   #navbar #logo img {
     width: 120px; }
-  #navbar .barBlock {
+
+.showNav {
+  top: 0px !important; }
+  .showNav .barBlock {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 20px;
     justify-content: center; }
-    #navbar .barBlock .blockBlock {
+    .showNav .barBlock .blockBlock {
       height: 100%;
       padding: 20px;
       font-family: 'Bitter', serif;
       transition: 0.2s ease;
       color: black;
       text-decoration: none; }
-      #navbar .barBlock .blockBlock:hover {
+      .showNav .barBlock .blockBlock:hover {
         color: #30ADD6; }
 
 .block {
@@ -150,6 +155,9 @@ h3 {
   z-index: 1;
   position: absolute;
   width: 100%;
+  margin-top: -50px;
+  padding-top: 50px;
+  box-sizing: border-box;
   height: 100%;
   background-color: transparent; }
 
@@ -158,6 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #wheelBlock {
   z-index: 0;
+  box-sizing: border-box;
   height: auto;
   min-height: 100vh;
   background-image: url("https://chris-sarli.github.io/FEC/img/wheel.jpg");
@@ -166,22 +175,52 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center top;
   box-shadow: inset 0 -10px 30px -10px rgba(0, 0, 0, 0.5); }
 
+#mobileNavButton {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  top: -75px;
+  transition: 0.1s ease;
+  left: 0px;
+  z-index: 5;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  #mobileNavButton img {
+    height: 50px;
+    margin: 0 auto; }
+
+.showMobileNavButton {
+  top: 0px !important; }
+
+.pageContent {
+  margin: 0; }
+
 @media only screen and (max-height: 550px) {
-  #wheelBlock h1, #wheelBlock h2 {
-    margin: 0 auto;
-    text-align: center;
-    width: 85vw; }
-  #wheelBlock h1 {
-    padding-top: 20px !important;
-    line-height: 130%;
-    font-size: 50pt; }
-  #wheelBlock h2 {
-    margin-top: 5px !important;
-    padding-top: 5px;
-    border-top: 1px solid white;
-    font-size: 30pt; }
-  #wheelBlock .shader {
-    background-color: rgba(0, 0, 0, 0.6); } }
+  #mobileNavButton {
+    display: flex; }
+  #navbar {
+    display: none; }
+  #wheelBlock {
+    padding-top: 50px; }
+    #wheelBlock h1, #wheelBlock h2 {
+      margin: 0 auto;
+      text-align: center;
+      width: 85vw; }
+    #wheelBlock h1 {
+      padding-top: 20px !important;
+      line-height: 130%;
+      font-size: 50pt; }
+    #wheelBlock h2 {
+      margin-top: 5px !important;
+      padding-top: 5px;
+      border-top: 1px solid white;
+      font-size: 30pt; }
+    #wheelBlock .shader {
+      background-color: rgba(0, 0, 0, 0.6); } }
 
 @media only screen and (max-height: 350px) {
   #wheelBlock h1, #wheelBlock h2 {
@@ -192,24 +231,30 @@ h1, h2, h3, h4, h5, h6 {
     display: none; }
   #wheelBlock h2 {
     padding-top: 30px;
-    border-top: 0px solid white;
+    border-top: 0px solid white !important;
     font-size: 30pt; }
   #wheelBlock .shader {
     background-color: rgba(0, 0, 0, 0.6); } }
 
 @media only screen and (max-width: 750px) {
-  #wheelBlock h1, #wheelBlock h2 {
-    margin: 0 auto;
-    text-align: center;
-    width: 85vw; }
-  #wheelBlock h1 {
-    padding-top: 60px;
-    line-height: 130%;
-    font-size: 50pt; }
-  #wheelBlock h2 {
-    font-size: 30pt;
-    margin-top: 25px !important;
-    padding-top: 30px;
-    border-top: 1px solid white; }
-  #wheelBlock .shader {
-    background-color: rgba(0, 0, 0, 0.6); } }
+  #mobileNavButton {
+    display: flex; }
+  #navbar {
+    display: none; }
+  #wheelBlock {
+    padding-top: 50px; }
+    #wheelBlock h1, #wheelBlock h2 {
+      margin: 0 auto;
+      text-align: center;
+      width: 85vw; }
+    #wheelBlock h1 {
+      padding-top: 60px;
+      line-height: 130%;
+      font-size: 50pt; }
+    #wheelBlock h2 {
+      font-size: 30pt;
+      margin-top: 25px !important;
+      padding-top: 30px;
+      border-top: 1px solid white; }
+    #wheelBlock .shader {
+      background-color: rgba(0, 0, 0, 0.6); } }
