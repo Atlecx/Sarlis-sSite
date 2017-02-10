@@ -15,6 +15,7 @@ p
 	font-size: 20px
 
 #navbar
+	z-index: 5
 	width: 100vw
 	height: 90px
 	background-color: rgba(255,255,255,.97)
@@ -50,7 +51,7 @@ p
 
 .block
 	width: 100vw
-	height: 100vh
+
 	h1
 		color: white
 		margin: 0
@@ -69,9 +70,7 @@ p
 		font-size: 25pt
 
 .textBlock
-	height: 40vh
 	&.longer
-		height: 60vh
 
 .picBlock
 	height: 90vh
@@ -119,7 +118,7 @@ p
 	flex-direction: column
 	align-items: center
 	justify-content: center
-	
+
 
 h3
 	color: black
@@ -155,10 +154,58 @@ h3
 	&:last-of-type
 		text-align: right
 
+.shader
+	z-index: 1
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.0)
+
+h1, h2, h3, h4, h5, h6
+	z-index: 3
 
 #wheelBlock
+	z-index: 0
+	height: auto
+	min-height: 100vh
 	background-image: url('https://chris-sarli.github.io/FEC/img/wheel.jpg')
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: center top
 	box-shadow: inset 0 -10px 30px -10px rgba(0,0,0,0.5)
+
+@media only screen and (max-height: 550px)
+	#wheelBlock
+		h1, h2
+			margin: 0 auto
+			text-align: center
+			width: 85vw
+		h1
+			padding-top: 20px !important
+			line-height: 130%
+			font-size: 50pt
+		h2
+			margin-top: 5px !important
+			padding-top: 5px
+			border-top: 1px solid white
+			font-size: 30pt
+		.shader
+			background-color: rgba(0, 0, 0, 0.6)
+
+@media only screen and (max-width: 750px)
+	#wheelBlock
+		h1, h2
+			margin: 0 auto
+			text-align: center
+			width: 85vw
+		h1
+			padding-top: 60px
+			line-height: 130%
+			font-size: 50pt
+		h2
+			font-size: 30pt
+			margin-top: 25px !important
+			padding-top: 30px
+			border-top: 1px solid white
+		.shader
+			background-color: rgba(0, 0, 0, 0.6)
