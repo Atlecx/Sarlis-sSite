@@ -259,6 +259,9 @@ h1, h2, h3, h4, h5, h6
 		display: none
 	#wheelBlock
 		padding-top: 50px
+	#wheelBlock, .shader
+		height: 500px !important
+		min-height: 500px !important
 		h1, h2
 			margin: 0 auto
 			text-align: center
@@ -291,6 +294,19 @@ h1, h2, h3, h4, h5, h6
 		.shader
 			background-color: rgba(0, 0, 0, 0.6)
 
+#arrowCirc
+	position: absolute
+	bottom: 0px
+	left: 50%
+	width: 100px
+	height: 50px
+	border-top-left-radius: 50px
+	border-top-right-radius: 50px
+	background-color: rgba(255, 255, 255, 0.75)
+	transform: translateY(-50%)
+	img
+		width: 50px
+
 @media only screen and (max-width: 750px)
 	.pageContent
 		//margin-top: 50px
@@ -300,12 +316,15 @@ h1, h2, h3, h4, h5, h6
 		display: none
 	#wheelBlock
 		padding-top: 50px
+	#wheelBlock, .shader
+		height: 500px !important
+		min-height: 500px !important
 		h1, h2
 			margin: 0 auto
 			text-align: center
 			width: 85vw
 		h1
-			padding-top: 60px
+			padding-top: 10px
 			line-height: 130%
 			font-size: 50pt
 		h2

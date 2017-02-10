@@ -243,20 +243,23 @@ h1, h2, h3, h4, h5, h6 {
     display: none; }
   #wheelBlock {
     padding-top: 50px; }
-    #wheelBlock h1, #wheelBlock h2 {
+  #wheelBlock, .shader {
+    height: 500px !important;
+    min-height: 500px !important; }
+    #wheelBlock h1, #wheelBlock h2, .shader h1, .shader h2 {
       margin: 0 auto;
       text-align: center;
       width: 85vw; }
-    #wheelBlock h1 {
+    #wheelBlock h1, .shader h1 {
       padding-top: 20px !important;
       line-height: 130%;
       font-size: 50pt; }
-    #wheelBlock h2 {
+    #wheelBlock h2, .shader h2 {
       margin-top: 5px !important;
       padding-top: 5px;
       border-top: 1px solid white;
       font-size: 30pt; }
-    #wheelBlock .shader {
+    #wheelBlock .shader, .shader .shader {
       background-color: rgba(0, 0, 0, 0.6); } }
 
 @media only screen and (max-height: 350px) {
@@ -273,6 +276,19 @@ h1, h2, h3, h4, h5, h6 {
   #wheelBlock .shader {
     background-color: rgba(0, 0, 0, 0.6); } }
 
+#arrowCirc {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 100px;
+  height: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.75);
+  transform: translateY(-50%); }
+  #arrowCirc img {
+    width: 50px; }
+
 @media only screen and (max-width: 750px) {
   #mobileNavButton {
     display: flex; }
@@ -280,18 +296,21 @@ h1, h2, h3, h4, h5, h6 {
     display: none; }
   #wheelBlock {
     padding-top: 50px; }
-    #wheelBlock h1, #wheelBlock h2 {
+  #wheelBlock, .shader {
+    height: 500px !important;
+    min-height: 500px !important; }
+    #wheelBlock h1, #wheelBlock h2, .shader h1, .shader h2 {
       margin: 0 auto;
       text-align: center;
       width: 85vw; }
-    #wheelBlock h1 {
-      padding-top: 60px;
+    #wheelBlock h1, .shader h1 {
+      padding-top: 10px;
       line-height: 130%;
       font-size: 50pt; }
-    #wheelBlock h2 {
+    #wheelBlock h2, .shader h2 {
       font-size: 30pt;
       margin-top: 25px !important;
       padding-top: 30px;
       border-top: 1px solid white; }
-    #wheelBlock .shader {
+    #wheelBlock .shader, .shader .shader {
       background-color: rgba(0, 0, 0, 0.6); } }

@@ -15,12 +15,6 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"\/build\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/.gitignore",
-		"oF": 0
-		},
 	"\/css\/style.css": {
 		"aP": 1,
 		"bl": 0,
@@ -56,7 +50,7 @@
 		"oA": 0,
 		"oAP": "\/img\/board.jpg",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/img\/close.ai": {
 		"ft": 8192,
@@ -92,7 +86,7 @@
 		"oA": 0,
 		"oAP": "\/img\/food.jpg",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/img\/logo.ai": {
 		"ft": 8192,
@@ -128,7 +122,7 @@
 		"oA": 0,
 		"oAP": "\/img\/movie.jpg",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/img\/REIS-Regular.otf": {
 		"ft": 8192,
@@ -148,7 +142,7 @@
 		"oA": 0,
 		"oAP": "\/img\/wheel.jpg",
 		"oF": 0,
-		"opt": 1
+		"opt": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
