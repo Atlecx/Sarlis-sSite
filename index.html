@@ -18,12 +18,28 @@
 		<a href="#contact"><div class="blockBlock">Contact</div></a>
 	</div>
 </div>
-<div id="mobileNavButton">
+<div id="mobileNavButton" class="">
 	<div class="row nav">
-		<img src="https://chris-sarli.github.io/FEC/img/logo.png">
-		<div class="toggle">
-	</div>
+		<div><img class="changeImg" src="https://chris-sarli.github.io/FEC/img/logo.png"></div>
+		<div id="toggle" class="toggle">
+			<img src='https://chris-sarli.github.io/FEC/img/menu.png'>
 		</div>
+	</div>
+		<a href="#services"><div class="row link">
+			What is SFC?
+		</div></a>
+		<a href="#services"><div class="row link">
+			Our Services
+		</div></a>
+		<a href="#services"><div class="row link">
+			Our Services
+		</div></a>
+		<a href="#hours"><div class="row link">
+			Hours and Availability
+		</div></a>
+		<a href="#contact"><div class="row link">
+			Contact
+		</div></a>
 </div>
 <div class="pageContent">
 <div id="wheelBlock" class="block">
@@ -83,15 +99,35 @@ $(document).ready(function(){
     });
 });
 
+function closeUp() {
+	$("#mobileNavButton").removeClass("fullMobileNav");
+	$(".row").removeClass("showRow");
+	$("body").removeClass("holdIt");
+}
+
+$(".row").click(function () {
+	if($(this).hasClass("nav")) {
+		$("#mobileNavButton").addClass("fullMobileNav");
+		$(".row").addClass("showRow");
+		$("body").addClass("holdIt");
+	}
+	else {
+		closeUp();
+	}
+})
+
+
+
+
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
+
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
-
       // Store hash
       var hash = this.hash;
 
@@ -104,8 +140,13 @@ $(document).ready(function(){
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+
+    } // End if]
+
   });
 });
+
+
+
 </script>
 </html>

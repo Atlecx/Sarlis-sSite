@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6
 	background-color: rgba(255, 255, 255, 0.97)
 	border-bottom: 1px solid rgba(0, 0, 0, 0.4)
 	top: -75px
-	transition: 0.1s ease
+	transition: all 0.2s ease
 	left: 0px
 	z-index: 5
 	flex-direction: column
@@ -199,29 +199,56 @@ h1, h2, h3, h4, h5, h6
 	justify-content: center
 	.row
 		width: 100%
-		height: auto
-		display: flex
+		//height: auto
+		display: none
 		flex-direction: row
 		align-items: center
 		justify-content: center
+		font-size: 30px
+		box-sizing: border-box
+		font-family: 'Bitter', serif
+		padding: 15px
 		&.nav
+			display: flex
+			//top: 0px
+			//padding: 0px
 			img
 				height: 45px
-				margin-bottom: 5px
+				transition: 0.3s ease
+				//margin-bottom: 5px
 			.toggle
+				cursor: pointer
 				$toggleSize: 35px
-				height: $toggleSize
+				height: 25px
 				position: absolute
 				right: 20px
 				width: $toggleSize
-				background-color: black
-				background-image: url('https://chris-sarli.github.io/FEC/img/menu.jpg')
+				img
+					width: 100%
+					height: 100%
 
 .showMobileNavButton
 	top: 0px !important
 
+.fullMobileNav
+	overflow: scroll !important
+	background-color: white !important
+	height: 100vh !important
+	padding-bottom: 30px
+	.row.nav
+		#toggle
+			opacity: 0
+		img
+			height: 90px !important
+
+.showRow
+	display: flex !important
+
 .pageContent
 	margin: 0
+
+.holdIt
+	overflow: hidden
 
 @media only screen and (max-height: 550px)
 	.pageContent

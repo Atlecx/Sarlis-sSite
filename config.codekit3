@@ -108,6 +108,20 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/menu.ai": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/img\/menu.ai",
+		"oF": 0
+		},
+	"\/img\/menu.png": {
+		"ft": 32768,
+		"iS": 1006,
+		"oA": 0,
+		"oAP": "\/img\/menu.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/movie.jpg": {
 		"ft": 16384,
 		"iS": 6927412,

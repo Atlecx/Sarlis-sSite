@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   top: -75px;
-  transition: 0.1s ease;
+  transition: all 0.2s ease;
   left: 0px;
   z-index: 5;
   flex-direction: column;
@@ -191,27 +191,50 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center; }
   #mobileNavButton .row {
     width: 100%;
-    height: auto;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
-    justify-content: center; }
-    #mobileNavButton .row.nav img {
-      height: 45px;
-      margin-bottom: 5px; }
-    #mobileNavButton .row.nav .toggle {
-      height: 35px;
-      position: absolute;
-      right: 20px;
-      width: 35px;
-      background-color: black;
-      background-image: url("https://chris-sarli.github.io/FEC/img/menu.jpg"); }
+    justify-content: center;
+    font-size: 30px;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+    padding: 15px; }
+    #mobileNavButton .row.nav {
+      display: flex; }
+      #mobileNavButton .row.nav img {
+        height: 45px;
+        transition: 0.3s ease; }
+      #mobileNavButton .row.nav .toggle {
+        cursor: pointer;
+        height: 25px;
+        position: absolute;
+        right: 20px;
+        width: 35px; }
+        #mobileNavButton .row.nav .toggle img {
+          width: 100%;
+          height: 100%; }
 
 .showMobileNavButton {
   top: 0px !important; }
 
+.fullMobileNav {
+  overflow: scroll !important;
+  background-color: white !important;
+  height: 100vh !important;
+  padding-bottom: 30px; }
+  .fullMobileNav .row.nav #toggle {
+    opacity: 0; }
+  .fullMobileNav .row.nav img {
+    height: 90px !important; }
+
+.showRow {
+  display: flex !important; }
+
 .pageContent {
   margin: 0; }
+
+.holdIt {
+  overflow: hidden; }
 
 @media only screen and (max-height: 550px) {
   #mobileNavButton {
