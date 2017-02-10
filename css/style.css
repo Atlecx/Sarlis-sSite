@@ -237,6 +237,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden; }
 
 @media only screen and (max-height: 550px) {
+  #arrowCirc {
+    display: none; }
   #mobileNavButton {
     display: flex; }
   #navbar {
@@ -278,18 +280,24 @@ h1, h2, h3, h4, h5, h6 {
 
 #arrowCirc {
   position: absolute;
-  bottom: 0px;
+  bottom: -30px;
   left: 50%;
   width: 100px;
   height: 50px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   background-color: rgba(255, 255, 255, 0.75);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
   #arrowCirc img {
-    width: 50px; }
+    width: 30px; }
 
 @media only screen and (max-width: 750px) {
+  #arrowCirc {
+    display: none; }
   #mobileNavButton {
     display: flex; }
   #navbar {
