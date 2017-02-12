@@ -40,11 +40,11 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 8px;
     justify-content: center; }
     .showNav .barBlock .blockBlock {
       height: 100%;
-      padding: 20px;
+      padding: 16px;
       font-family: 'Droid Sans', sans-serif;
       transition: 0.2s ease;
       color: black;
@@ -284,6 +284,47 @@ h1, h2, h3, h4, h5, h6 {
       max-width: 400px;
       text-align: left;
       margin-right: 100px; }
+  .bottomContent #m2 {
+    background-image: url("https://chris-sarli.github.io/FEC/img/balloon.jpg");
+    color: black;
+    text-align: left !important;
+    padding-bottom: 0px; }
+    .bottomContent #m2 .shadey {
+      background-color: rgba(255, 255, 255, 0.35);
+      justify-content: flex-start;
+      padding-bottom: 30px;
+      align-items: flex-start; }
+    .bottomContent #m2 h1 {
+      width: 85vw;
+      text-align: left;
+      font-size: 5rem;
+      margin-left: 50px;
+      min-width: 85vw !important; }
+    .bottomContent #m2 .para {
+      max-width: 400px;
+      margin-left: 50px;
+      text-align: left; }
+
+.miniBlocks {
+  width: 90vw;
+  margin-top: 10px;
+  margin-left: 5vw;
+  display: flex;
+  font-family: 'Droid Sans', sans-serif;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .miniBlocks .mBlock {
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.61);
+    margin: 10px;
+    padding: 10px; }
+    .miniBlocks .mBlock h2 {
+      margin: 0px;
+      text-align: center; }
 
 @media only screen and (max-height: 550px) {
   #arrowCirc {

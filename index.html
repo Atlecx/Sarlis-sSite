@@ -13,7 +13,8 @@
 		<img src="https://chris-sarli.github.io/FEC/img/logo.png">
 	</div></a>
 	<div class="barBlock">
-		<a href="#m1"><div class="blockBlock">Our Services</div></a>
+		<a href="#m1"><div class="blockBlock">What is SFC?</div></a>
+		<a href="#m2"><div class="blockBlock">Our Attractions</div></a>
 		<a href="#hours"><div class="blockBlock">Hours and Availabilty</div></a>
 		<a href="#contact"><div class="blockBlock">Contact</div></a>
 	</div>
@@ -28,8 +29,8 @@
 		<a href="#m1"><div class="row link">
 			What is SFC?
 		</div></a>
-		<a href="#services"><div class="row link">
-			Our Services
+		<a href="#m2"><div class="row link">
+			Our Attractions
 		</div></a>
 		<a href="#services"><div class="row link">
 			Our Services
@@ -102,68 +103,120 @@
 
 
 	</div>
+	<div id="m2" class="section">
+		<div class="shadey">
+			<h1 id="e1">OUR ATTRACTIONS</h1>
+			<div class="miniBlocks">
+				<div class="mBlock">
+					<h2>Rides</h2>
+					<ul>
+						<li>
+							Ferris Wheel
+						</li>
+						<li>Bumper Cars</li>
+						<li>Carousel</li>
+						<li>Luna 360</li>
+						<li>SFC Coaster</li>
+					</ul>
+				</div>
+				<div class="mBlock">
+					<h2>Arcade</h2>
+					<ul>
+						<li>Skeeball</li>
+						<li>Balloon Pop</li>
+						<li>Shooting Range</li>
+						<li>Driving Simulators</li>
+					</ul>
+				</div>
+				<div class="mBlock">
+					<h2>Lawn Games</h2>
+					<ul>
+						<li>Water Balloons</li>
+						<li>Sack Races</li>
+						<li>Relay Races</li>
+						<li>Limbo</li>
+					</ul>
+				</div>
+				<div class="mBlock">
+					<h2>And More!</h2>
+					<ul>
+						<li>Gourmet Snackbar</li>
+						<li>Drive-In Movie Theater</li>
+					</ul>
+				</div>
+				<div class="mBlock">
+					<h2>Private Events</h2>
+					<ul>
+						<li>Private Movie Screenings</li>
+						<li>Reserve a part of SFC for a private function. Please call to enquire.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
 </body>
 <script type="text/javascript">
-$(document).ready(function(){
-    $(window).scroll(function(){
-        if ($(window).scrollTop() > 20){
-            $("#navbar").addClass("showNav");
-						$("#mobileNavButton").addClass("showMobileNavButton");
-        }
-        if ($(window).scrollTop() <= 20){
-            $("#navbar").removeClass("showNav");
-						$("#mobileNavButton").removeClass("showMobileNavButton");
-        }
-    });
-});
+	$(document).ready(function(){
+	    $(window).scroll(function(){
+	        if ($(window).scrollTop() > 20){
+	            $("#navbar").addClass("showNav");
+							$("#mobileNavButton").addClass("showMobileNavButton");
+	        }
+	        if ($(window).scrollTop() <= 20){
+	            $("#navbar").removeClass("showNav");
+							$("#mobileNavButton").removeClass("showMobileNavButton");
+	        }
+	    });
+	});
 
-function closeUp() {
-	$("#mobileNavButton").removeClass("fullMobileNav");
-	$(".row").removeClass("showRow");
-	$("body").removeClass("holdIt");
-}
-
-$(".row").click(function () {
-	if($(this).hasClass("nav")) {
-		$("#mobileNavButton").addClass("fullMobileNav");
-		$(".row").addClass("showRow");
-		$("body").addClass("holdIt");
+	function closeUp() {
+		$("#mobileNavButton").removeClass("fullMobileNav");
+		$(".row").removeClass("showRow");
+		$("body").removeClass("holdIt");
 	}
-	else {
-		closeUp();
-	}
-})
+
+	$(".row").click(function () {
+		if($(this).hasClass("nav")) {
+			$("#mobileNavButton").addClass("fullMobileNav");
+			$(".row").addClass("showRow");
+			$("body").addClass("holdIt");
+		}
+		else {
+			closeUp();
+		}
+	})
 
 
 
 
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
 
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // Store hash
-      var hash = this.hash;
+	    // Make sure this.hash has a value before overriding default behavior
+	    if (this.hash !== "") {
+	      // Prevent default anchor click behavior
+	      event.preventDefault();
+	      // Store hash
+	      var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - 100
-      }, 800, function(){
+	      // Using jQuery's animate() method to add smooth page scroll
+	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top - 100
+	      }, 800, function(){
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
+	        // Add hash (#) to URL when done scrolling (default click behavior)
+	        window.location.hash = hash;
+	      });
 
-    } // End if]
+	    } // End if]
 
-  });
-});
+	  });
+	});
 
 
 
