@@ -334,8 +334,8 @@ h1, h2, h3, h4, h5, h6
 		h2
 			margin: 0px
 			text-align: center
-		width: 200px
-		height: 150px
+		width: 190px
+		min-height: 150px
 		border-radius: 5px
 		background-color: rgba(255, 255, 255, 0.61)
 		margin: 10px
@@ -424,6 +424,7 @@ h1, h2, h3, h4, h5, h6
 	transition: 0.2s ease
 	justify-content: center
 	cursor: pointer
+	animation: upDown 5s ease-in-out 2s infinite
 	&:hover
 		transform: scale(1.1)
 		background-color: rgba(255, 255, 255, 0.96)
@@ -516,7 +517,25 @@ h1, h2, h3, h4, h5, h6
 			min-width: 100vw
 			margin-top: 140px !important
 			font-size: 1rem
+	#m2 .shadey
+		h1
+			width: 90vw
+			text-align: center
+			margin-left: 5vw
+			font-size: 3rem
 
 @media only screen and (max-width: 500px)
 	#m1
 		background-position: top
+	.mBlock
+		width: 85vw !important
+		ul
+			font-size: 1.2em
+
+@keyframes upDown
+	0%
+		transform: translateY(0px)
+	50%
+		transform: translateY(5px)
+	100%
+		transform: translate(0px)
