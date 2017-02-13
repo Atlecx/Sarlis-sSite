@@ -5,7 +5,7 @@
 	<title>South Forest Center</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<link rel="icon" href="https://chris-sarli.github.io/FEC/img/favicon.png">
+	<link rel="icon" href="https://chris-sarli.github.io/FEC/img/favi_favi.png">
 </head>
 <body>
 <div id="navbar">
@@ -31,9 +31,6 @@
 		</div></a>
 		<a href="#m2"><div class="row link">
 			Our Attractions
-		</div></a>
-		<a href="#services"><div class="row link">
-			Our Services
 		</div></a>
 		<a href="#m3"><div class="row link">
 			Hours and Admission
@@ -148,8 +145,11 @@
 					<h2>Private Events</h2>
 					<ul>
 						<li>Private Movie Screenings</li>
-						<li>Reserve a part of SFC for a private function. <a>Check Availability.</a></li>
+						<li>Reserve a part of SFC for a private function.</li>
 					</ul>
+					<div id="sche" class="button">
+						Schedule now
+					</div>
 				</div>
 			</div>
 		</div>
@@ -178,10 +178,10 @@
 		</div>
 		<div class="mBlock">
 		<h2>Location:</h2>
-		<div class="ct">123 Example Street</div>
+		<div class="ct">123 Example Street</div><a href="https://www.google.com/maps/dir/">
 		<div class="button">
 			Get Directions
-		</div>
+		</div></a>
 	</div>
 			</div>
 		</div>
@@ -198,8 +198,127 @@
 			</div>
 		</div>
 </div>
+<div class="modalContainer" id="mo2">
+	<div class="modal">
+		<div class="close">
+		</div>
+		<div class="cont">
+			Thanks for scheduling! We will be in touch soon to work out the details.
+		</div>
+	</div>
+</div>
+<div class="modalContainer" id="mo1">
+	<div class="modal">
+		<div class="close">
+		</div>
+		<div class="cont">
+			<h3>Party Planner</h3>
+			<div class="it">
+				Please pick a date:
+			</div>
+			<div class="cal">
+				<div class="calR">
+					<div class="CalD nope" id="">
+
+					</div>
+					<div class="CalD nope" id="">
+
+					</div>
+					<div class="CalD nope" id="">
+
+					</div>
+					<div class="CalD" id="1">1</div>
+					<div class="CalD" id="2">2</div>
+					<div class="CalD" id="3">3</div>
+					<div class="CalD" id="4">4</div>
+				</div>
+				<div class="calR">
+					<div class="CalD" id="5">5</div>
+					<div class="CalD" id="6">6</div>
+					<div class="CalD" id="7">7</div>
+					<div class="CalD" id="8">8</div>
+					<div class="CalD" id="9">9</div>
+					<div class="CalD" id="10">10</div>
+					<div class="CalD" id="11">11</div>
+				</div>
+				<div class="calR">
+					<div class="CalD" id="12">12</div>
+					<div class="CalD" id="13">13</div>
+					<div class="CalD" id="14">14</div>
+					<div class="CalD" id="15">15</div>
+					<div class="CalD" id="16">16</div>
+					<div class="CalD" id="17">17</div>
+					<div class="CalD" id="18">18</div>
+				</div>
+				<div class="calR">
+					<div class="CalD" id="19">19</div>
+					<div class="CalD" id="20">20</div>
+					<div class="CalD" id="21">21</div>
+					<div class="CalD" id="22">22</div>
+					<div class="CalD" id="23">23</div>
+					<div class="CalD" id="24">24</div>
+					<div class="CalD" id="25">25</div>
+				</div>
+				<div class="calR">
+					<div class="CalD" id="26">26</div>
+					<div class="CalD" id="27">27</div>
+					<div class="CalD" id="28">28</div>
+					<div class="CalD nope" id="">
+
+					</div>
+					<div class="CalD nope" id="">
+
+					</div>
+					<div class="CalD nope" id="">
+
+					</div>
+					<div class="CalD nope" id="">
+
+					</div>
+				</div>
+			</div>
+			<div class="after">
+				<div class="cent">
+					<div id="date"></div>
+				</div>
+				<div class="cent initH">
+					<input id="i1" type="test" name="name" placeholder="Your Name">
+					<input id="i2" type="text" name="email" placeholder="Your Email">
+					<div class="button nopes" id="sub">
+						Submit
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 </body>
 <script type="text/javascript">
+$("#sche").click(function () {
+	$("#mo1").css("display", "flex");
+});
+
+function openUp() {
+	$("#sub").removeClass("nopes");
+}
+
+$("#i1").blur( function () {
+	if($("#i1").val() != "" && $("#i2").val() != ""){
+		openUp();
+	}
+	else {
+		$("#sub").addClass("nopes");
+	}
+});
+$("#i2").blur( function () {
+	if($("#i1").val() != "" && $("#i2").val() != ""){
+		openUp();
+	}
+	else {
+		$("#sub").addClass("nopes");
+	}
+});
+
 	$(document).ready(function(){
 	    $(window).scroll(function(){
 	        if ($(window).scrollTop() > 20){
@@ -230,8 +349,25 @@
 		}
 	})
 
+$(".CalD").not(".nope").click(function() {
+	$("#date").html("You have selected Feburary " + $(this).html() + ", 2017. In order to assure that you get the best possible experience, please enter your name and email below, and we'll reserve your spot and be in touch about specific details.");
+	$(".CalD").removeClass("thisOne");
+	$(this).addClass("thisOne");
+	$(".initH").removeClass("initH");
+});
 
+$("#sub").click(function () {
+	if($(this).hasClass("nopes")) {
+	}
+	else{
+	$("#mo1").hide();
+	$("#mo2").css("display", "flex");
+}
+});
 
+$(".close").click(function () {
+	$(".modalContainer").hide();
+})
 
 	$(document).ready(function(){
 	  // Add smooth scrolling to all links

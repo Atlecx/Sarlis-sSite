@@ -516,7 +516,8 @@ h1, h2, h3, h4, h5, h6 {
     #m1 .shadey h1 {
       font-size: 3rem;
       text-align: center;
-      margin-right: 0px; }
+      margin-right: 0px;
+      margin-top: 15px !important; }
     #m1 .shadey .para {
       margin: 0px;
       margin-right: 0px !important;
@@ -544,9 +545,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0px; }
   #m3 .shadey {
     background-color: rgba(0, 0, 0, 0.2);
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 20px; }
+    #m3 .shadey .miniBlocks {
+      margin-left: 0px; }
     #m3 .shadey .mBlock {
       height: auto;
       width: 250px;
@@ -556,8 +559,7 @@ h1, h2, h3, h4, h5, h6 {
       color: white;
       text-align: center; }
     #m3 .shadey .para {
-      margin: 0px;
-      margin-left: 50px; }
+      margin: 0px; }
 
 .button {
   width: 125px;
@@ -593,3 +595,151 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(5px); }
   100% {
     transform: translate(0px); } }
+
+#sche {
+  margin-top: 7px;
+  margin-bottom: 7px; }
+
+#mo2 .modal {
+  min-height: 100px;
+  height: 150px !important;
+  max-width: 500px;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+  #mo2 .modal .cont {
+    margin-top: 10px;
+    padding: 20px; }
+
+.nopes {
+  opacity: 0.3;
+  cursor: not-allowed; }
+  .nopes:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black; }
+
+.modalContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0px;
+  left: 0px;
+  z-index: 7;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .modalContainer .modal {
+    width: 75%;
+    min-height: 85%;
+    min-width: 400px;
+    background-color: white;
+    border-radius: 7px; }
+    .modalContainer .modal .close {
+      position: relative;
+      top: 15px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      margin-right: 15px;
+      margin-left: auto;
+      width: 20px;
+      background-size: contain;
+      height: 20px;
+      background-image: url("https://chris-sarli.github.io/FEC/img/close.png");
+      opacity: 0.4; }
+      .modalContainer .modal .close:hover {
+        opacity: 0.8; }
+    .modalContainer .modal .cont {
+      width: 100%;
+      box-sizing: border-box; }
+      .modalContainer .modal .cont h3 {
+        padding-top: 0px;
+        font-family: 'Montserrat', sans-serif; }
+      .modalContainer .modal .cont .button {
+        font-family: "Montserrat", sans-serif; }
+      .modalContainer .modal .cont input {
+        outline: 0px;
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid black;
+        border-radius: 6px;
+        margin: 0 auto;
+        padding: 10px;
+        transition: 0.2s ease;
+        font-size: 1.5em; }
+        .modalContainer .modal .cont input:focus {
+          border: 1px solid #30ADD6;
+          color: #30ADD6; }
+      .modalContainer .modal .cont .cal {
+        width: 100%;
+        margin: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        box-sizing: border-box;
+        height: 100%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px; }
+        .modalContainer .modal .cont .cal .calR {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center; }
+          .modalContainer .modal .cont .cal .calR:last-of-type .CalD {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.19); }
+          .modalContainer .modal .cont .cal .calR .CalD {
+            cursor: pointer;
+            height: calc(calc(calc(100vh * 0.8) - 100px) / 7);
+            width: calc(calc(calc(100vw * 0.75) - 30px) / 7);
+            max-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: content-box;
+            justify-content: center;
+            border-top: 1px solid rgba(0, 0, 0, 0.19);
+            border-left: 1px solid rgba(0, 0, 0, 0.19);
+            font-size: 2rem;
+            transition: 0.2s ease;
+            font-family: 'Montserrat', sans-serif; }
+            .modalContainer .modal .cont .cal .calR .CalD .nope {
+              cursor: text !important; }
+            .modalContainer .modal .cont .cal .calR .CalD:last-of-type {
+              border-right: 1px solid rgba(0, 0, 0, 0.19); }
+            .modalContainer .modal .cont .cal .calR .CalD:hover:not(.nope) {
+              background-color: #30ADD6;
+              color: white; }
+
+.it {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px; }
+
+.thisOne {
+  background-color: #1f98bf;
+  color: white; }
+
+.cent {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .cent #date {
+    font-family: "Montserrat", sans-serif;
+    height: 65px; }
+  .cent .button {
+    margin-top: 0px; }
+  .cent .button, .cent input {
+    margin-bottom: 10px !important; }
+
+.initH {
+  display: none; }
