@@ -62,14 +62,14 @@ p
 		margin: 0
 		font-family: 'Satisfy', cursive
 		font-size: 80pt
-		width: 80vw
-		margin-left: 5vw
+		width: 80%
+		margin-left: 5%
 		padding-top: 15vh
 	h2
 		color: white
 		margin: 0
 		font-family: 'Droid Sans', sans-serif
-		margin-left: 5vw
+		margin-left: 5%
 		text-transform: uppercase
 		font-weight: 700
 		font-size: 25pt
@@ -105,11 +105,11 @@ p
 			font-size: 26px
 
 	.p1
-		width: 40vw
+		width: 40%
 		background-image: url('https://chris-sarli.github.io/FEC/img/movie.jpg')
 		background-position: left center
 	.p2
-		width: 60vw
+		width: 60%
 		background-image: url('https://chris-sarli.github.io/FEC/img/board.jpg')
 	.p3
 		width: 100%
@@ -136,7 +136,7 @@ h3
 	font-weight: 400
 
 .dubBlock
-	width: 80vw
+	width: 80%
 	max-width: 700px
 	margin: 0 auto
 	margin-top: 30px
@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5, h6
 			.para
 				font-family: 'Droid Sans', sans-serif
 				font-size: 1.2em
-				width: 90vw
+				width: 90%
 				max-width: 500px
 				line-height: 140%
 				margin-bottom: 15px
@@ -282,24 +282,26 @@ h1, h2, h3, h4, h5, h6
 				margin-top: 50px
 				box-sizing: border-box
 		h1
-			margin: 0px
+
 			font-family: 'Montserrat', sans-serif
 			font-weight: 800
-			width: 80vw
-			max-width: 600px
 			margin-top: 20px
 			line-height: 100%
-			margin-right: 50px
-			text-align: right
 			font-size: 7rem
 	#m1
 		background-image: url('https://chris-sarli.github.io/FEC/img/lift.jpg')
 		color: black
+		h1
+			margin: 0px
+			width: 80%
+			max-width: 600px
+			margin-right: 50px
+			text-align: right
 		.para
 			max-width: 400px
 			text-align: left
 			margin-right: 100px
-	#m1
+	#m3
 		background-image: url('https://chris-sarli.github.io/FEC/img/clock.jpg')
 		color: black
 		.para
@@ -317,20 +319,20 @@ h1, h2, h3, h4, h5, h6
 			padding-bottom: 30px
 			align-items: flex-start
 		h1
-			width: 85vw
-			text-align: left
+			width: 100%
+			text-align: center
 			font-size: 5rem
-			margin-left: 50px
-			min-width: 85vw !important
+			box-sizing: border-box
+			min-width: 85% !important
 		.para
 			max-width: 400px
 			margin-left: 50px
 			text-align: left
 
 .miniBlocks
-	width: 90vw
+	width: 90%
 	margin-top: 10px
-	margin-left: 5vw
+	margin-left: 5%
 	display: flex
 	font-family: 'Droid Sans', sans-serif
 	flex-direction: row
@@ -341,10 +343,12 @@ h1, h2, h3, h4, h5, h6
 		h2
 			margin: 0px
 			text-align: center
+			padding-bottom: 7px
+			border-bottom: 1px solid rgba(181, 181, 181, 0.3)
 		width: 190px
 		min-height: 150px
 		border-radius: 5px
-		background-color: rgba(255, 255, 255, 0.61)
+		background-color: rgba(255, 255, 255, 0.9)
 		margin: 10px
 		padding: 10px
 
@@ -365,7 +369,7 @@ h1, h2, h3, h4, h5, h6
 		h1, h2
 			margin: 0 auto
 			text-align: center
-			width: 85vw
+			width: 85%
 		h1
 			padding-top: 0px !important
 			line-height: 130%
@@ -399,7 +403,7 @@ h1, h2, h3, h4, h5, h6
 		h1, h2
 			margin: 0 auto
 			text-align: center
-			width: 85vw
+			width: 85%
 		h1
 			display: none
 		h2
@@ -440,6 +444,22 @@ h1, h2, h3, h4, h5, h6
 		margin: 0 auto
 		width: 15px
 
+#m4
+	.shadey
+		align-items: center
+		justify-content: center
+		h1
+			margin-bottom: 20px
+		.para
+			text-align: left
+			width: auto !important
+			max-width: 90% !important
+			margin: 0px
+			margin-bottom: 15px
+
+.hl
+	color: #30ADD6
+
 @media only screen and (max-width: 950px)
 	#m2 h1
 		text-align: center !important
@@ -468,12 +488,14 @@ h1, h2, h3, h4, h5, h6
 			border-radius: 8px
 			border-bottom-left-radius: 0px
 			border-bottom-right-radius: 0px
-			min-width: 65vw
+			min-width: 65%
 			margin-top: 200px !important
 			font-size: 1rem
 			margin-bottom: 0px !important
 
 @media only screen and (max-width: 750px)
+	#m4 h1
+		font-size: 4em
 	#arrowCirc
 		display: none
 	.pageContent
@@ -491,7 +513,7 @@ h1, h2, h3, h4, h5, h6
 		h1, h2
 			margin: 0 auto
 			text-align: center
-			width: 85vw
+			width: 85%
 		h1
 			padding-top: 0px
 			line-height: 130%
@@ -511,6 +533,10 @@ h1, h2, h3, h4, h5, h6
 		max-width: 1000px !important
 	.section
 		padding-bottom: 0px !important
+	#m3 .shadey h1
+		font-size: 3.8rem !important
+		h1
+			text-align: center
 	#m1
 		background-position: right
 		padding-bottom: 0px !important
@@ -532,16 +558,62 @@ h1, h2, h3, h4, h5, h6
 			font-size: 1rem
 	#m2 .shadey
 		h1
-			width: 90vw
+			width: 90%
 			text-align: center
-			margin-left: 5vw
+			margin-left: 5%
 			font-size: 3rem
+
+.rt
+	float: right
+	font-weight: bold
+
+.ct
+	text-align: center
+	margin-top: 15px
+
+#m3
+	padding-bottom: 0px
+	.shadey
+		background-color: rgba(0, 0, 0, 0.2)
+		align-items: flex-start
+		justify-content: flex-start
+		padding-bottom: 20px
+		.mBlock
+			height: auto
+			width: 250px
+			line-height: 160%
+		h1
+			font-size: 5rem
+			color: white
+			text-align: center
+		.para
+			margin: 0px
+			margin-left: 50px
+
+.button
+	width: 125px
+	padding: 7px
+	font-size: 0.9em
+	text-align: center
+	font-weight: bold
+	text-transform: uppercase
+	background-color: rgba(48, 173, 214, 0)
+	border: 1px solid rgb(0, 0, 0)
+	transition: 0.2s ease
+	border-radius: 5px
+	margin: 0 auto
+	margin-top: 15px
+	cursor: pointer
+	&:hover
+		background-color: #30ADD6
+		border: 1px solid #30ADD6
+		color: white
 
 @media only screen and (max-width: 500px)
 	#m1
 		background-position: top
 	.mBlock
-		width: 85vw !important
+		width: 85% !important
 		ul
 			font-size: 1.2em
 
